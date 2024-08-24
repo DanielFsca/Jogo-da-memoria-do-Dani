@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"> <!-- Imagem de fundo -->
+
+    <!-- Título do Jogo -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jogo da Memória do Dani"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Pontuação -->
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pares achados: 0"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_below="@id/titleTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+
+    <!-- GridLayout para o jogo -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/resetButton"
+        android:layout_below="@id/scoreTextView"
+        android:layout_alignParentTop="true"
+        android:columnCount="4"
+        android:rowCount="4"
+        android:padding="8dp"
+        android:layout_margin="8dp">
+        <!-- Os botões serão adicionados programaticamente -->
+    </GridLayout>
+
+    <!-- Botão para reiniciar o jogo -->
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recomeçar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+</RelativeLayout>
+
